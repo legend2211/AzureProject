@@ -1,10 +1,10 @@
-<?php 
+<?php
 
-    $fname=$_POST['fname'];
-    $lname=$_POST['lname'];
-    $group=$_POST['bgroup'];
+$fname = $_POST['fname'];
+$lname = $_POST['lname'];
+$group = $_POST['bgroup'];
 
-    try {
+try {
     $host = "myazsqldemo.mysql.database.azure.com";
     $port = 3306;
     $dbname = "project";
@@ -19,53 +19,43 @@
     die();
 }
 
-    
-    $sql="select * from register where firstname='$fname'and lastname='$lname' and bloodgroup='$group' ";
-    $result=$cn->query($sql);
-    
-    $rowcount=$result->rowCount();
-    
-    if($rowcount>=1)
-    {
-    
-    ?>
+$sql = "SELECT * FROM register WHERE firstname='$fname' AND lastname='$lname' AND bloodgroup='$group'";
+$result = mysqli_query($cn, $sql);
 
-<html>
-<head>
-    <title> Login page</title>
-    <!--<style>
-       div{text-align: center;}
-    </style>-->
-    <link rel="stylesheet" href="style.css">
-</head>
+if ($result) {
+    $rowcount = mysqli_num_rows($result);
 
-<body>
-    <div class="container">
-    <form action="login.php" method="POST">
-
-        <h1>Certificate</h1>
-
-        <h2> certificate of Apperatation</h2>
-
-            <h2> Our Sincere and Heartful thanks to  <?php echo $fname." ".$lname ?> For the life saving Gift of Blood.you gave someone a better Tommarow for donating <?php echo $group?> Blood  </h2>  
-
-            <h1> Be Our Blood Buddy For Life ! <h1>
-
-        
-    </div>
-
-    </form>
-</body>
-</html>
-        
-    <?php
-      
-    }
-    else 
-    {
-        echo"Please donate  fisrt"; 
+    if ($rowcount >= 1) {
         ?>
-        <script type="text/javascript">alert('No Donar found !!!');</script>
+
+        <html>
+        <head>
+            <title>Login page</title>
+            <link rel="stylesheet" href="style.css">
+        </head>
+
+        <body>
+            <div class="container">
+                <form action="login.php" method="POST">
+                    <h1>Certificate</h1>
+                    <h2>Certificate of Appreciation</h2>
+                    <h2>Our Sincere and Heartfelt thanks to <?php echo $fname." ".$lname ?> for the life saving Gift of Blood. You gave someone a better Tomorrow by donating <?php echo $group?> Blood</h2>
+                    <h1>Be Our Blood Buddy For Life!</h1>
+                </form>
+            </div>
+        </body>
+        </html>
+
+        <?php
+    } else {
+        echo "Please donate first";
+        ?>
+        <script type="text/javascript">alert('No Donor found !!!');</script>
         <?php
     }
+} else {
+    echo "Error in query execution";
+}
+
+mysqli_close($cn);
 ?>
