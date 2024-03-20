@@ -26,7 +26,7 @@
     $dbpass="Server@1";
 
     $cn = mysqli_init();
-    mysqli_ssl_set($cn,NULL,NULL,DigiCertGlobalRootG2.crt.pem,NULL,NULL );
+    mysqli_ssl_set($cn,NULL,NULL,"DigiCertGlobalRootG2.crt.pem",NULL,NULL );
 }
 
 catch(PDOException $e)
