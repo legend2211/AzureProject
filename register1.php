@@ -23,9 +23,7 @@
     $cn=new PDO("mysql:host=$host; port=$port; dbname=$dbname",$dbuser,$dbpass);
 $cn = mysqli_init();
     mysqli_ssl_set($cn,NULL,NULL,"DigiCertGlobalRootG2.crt.pem",NULL,NULL )    
-}
-
-catch(PDOException $e)
+}catch(PDOException $e)
 {
     echo $e-> getmessage();
     die();
