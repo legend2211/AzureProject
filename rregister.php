@@ -13,13 +13,12 @@
 
     $cn = mysqli_init();
     mysqli_ssl_set($cn, NULL, NULL, "DigiCertGlobalRootG2.crt.pem", NULL, NULL);
+   
     mysqli_real_connect($cn, $host, $dbuser, $dbpass, $dbname, $port);
 } catch (Exception $e) {
     echo $e->getMessage();
     die();
 }
-
-
 $sql="insert into reciver(firstname,lastname,contcactno,email,bloodgroup) values('$fname','$lname',$cno,'$email','$bgroup')";
 $result=$cn->query($sql);
 
