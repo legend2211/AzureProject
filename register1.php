@@ -14,14 +14,14 @@
 
   try
 {
-  /*  $host="localhost";
+    $host="myazsqldemo.mysql.database.azure.com";
     $port=3306;
     $dbname="project";
-    $dbuser="root";
-    $dbpass="root";
+    $dbuser="myadmin@myazsqldemo";
+    $dbpass="Server@1";
 
-    $cn=new PDO("mysql:host=$host; port=$port; dbname=$dbname",$dbuser,$dbpass);*/
-    $cn=mysqli_init(); mysqli_ssl_set{$cnn, NULL, NULL, {ca-cert filename}, NULL, NULL}; mysqli_real_connect($con, "myazsqldemo.mysql.database.azure.com", "myadmin@myazsqldemo", {Server@1}, {project}, 3306);
+    $cn=new PDO("mysql:host=$host; port=$port; dbname=$dbname",$dbuser,$dbpass);
+    
 }
 
 catch(PDOException $e)
