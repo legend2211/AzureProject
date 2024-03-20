@@ -13,8 +13,7 @@
 
     $cn = mysqli_init();
     mysqli_ssl_set($cn, NULL, NULL, "DigiCertGlobalRootG2.crt.pem", NULL, NULL);
-   
-    mysqli_real_connect($cn, $host, $dbuser, $dbpass, $dbname, $port);
+   mysqli_real_connect($cn, $host, $dbuser, $dbpass, $dbname, $port);
 } catch (Exception $e) {
     echo $e->getMessage();
     die();
@@ -36,8 +35,4 @@ else
     <?php
     header("location:register1.html");
 }
-
-
-
-
 ?>
