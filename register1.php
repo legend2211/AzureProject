@@ -33,14 +33,15 @@ if ($result) {
     ?>
     <script type="text/javascript">alert('Successfully Registered !!!');</script>
     <?php
+    mysqli_close($cn);
     header("location: index.php");
+    exit;
 } else {
     ?>
     <script type="text/javascript">alert('Please register first !!!');</script>
     <?php
     header("location: register1.html");
+    exit;
 }
-
-mysqli_close($cn);
 
 ?>
