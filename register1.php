@@ -33,7 +33,7 @@ if ($result) {
     ?>
     <script type="text/javascript">alert('Successfully Registered !!!');</script>
     <?php
-    header("location: home.php");
+    header("location: index.php");
 } else {
     ?>
     <script type="text/javascript">alert('Please register first !!!');</script>
