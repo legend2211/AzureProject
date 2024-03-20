@@ -1,4 +1,5 @@
-<?php 
+<?php
+
 $fname = $_POST['fname'];
 $lname = $_POST['lname'];
 $cno = $_POST['cno'];
@@ -24,16 +25,16 @@ $sql = "INSERT INTO reciver (firstname, lastname, contcactno, email, bloodgroup)
 $result = mysqli_query($cn, $sql);
 
 if ($result) {
-    ?>
-    <script type="text/javascript">alert('Successfully Registered !!!');</script>
-    <?php
-    header("location:home.php");
+    mysqli_close($cn);
+    header("location: index.php");
+    exit; // Stop further execution
 } else {
+    mysqli_close($cn);
     ?>
     <script type="text/javascript">alert('Failed to register. Please try again.');</script>
     <?php
-    header("location:register1.html");
+    header("location: register1.html");
+    exit; // Stop further execution
 }
 
-mysqli_close($cn);
 ?>
