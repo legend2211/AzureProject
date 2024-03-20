@@ -49,7 +49,7 @@
             <title>Blood Bank System</title>
             <link rel="stylesheet" type="text/css" href="style2.css" />
             <div class="topnav">
-                <a class="active " href="Home.php">Home</a>
+                <a class="active " href="index.php">Home</a>
                 <a class="active " href="register1.html">Register</a> 
                 <a class="active " href="certificate.html">Certificate</a>
                 <a class="active" href="rregister.html">Request</a>     
