@@ -30,18 +30,16 @@ $sql = "INSERT INTO register (firstname, lastname, contactno, email, bloodgroup,
 $result = mysqli_query($cn, $sql);
 
 if ($result) {
-    ?>
-    <script type="text/javascript">alert('Successfully Registered !!!');</script>
-    <?php
     mysqli_close($cn);
     header("location: index.php");
-    exit;
+    exit; // Stop further execution
 } else {
+    mysqli_close($cn);
     ?>
     <script type="text/javascript">alert('Please register first !!!');</script>
     <?php
     header("location: register1.html");
-    exit;
+    exit; // Stop further execution
 }
 
 ?>
