@@ -21,7 +21,7 @@
     $dbpass="root";
 
     $cn=new PDO("mysql:host=$host; port=$port; dbname=$dbname",$dbuser,$dbpass);*/
-    $cn=mysqli_init(); mysqli_ssl_set($cnn, NULL, NULL, {ca-cert filename}, NULL, NULL); mysqli_real_connect($con, "myazsqldemo.mysql.database.azure.com", "myadmin@myazsqldemo", {Server@1}, {project}, 3306);
+    $cn=mysqli_init(); mysqli_ssl_set{$cnn, NULL, NULL, {ca-cert filename}, NULL, NULL}; mysqli_real_connect($con, "myazsqldemo.mysql.database.azure.com", "myadmin@myazsqldemo", {Server@1}, {project}, 3306);
 }
 
 catch(PDOException $e)
