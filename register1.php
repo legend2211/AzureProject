@@ -1,6 +1,4 @@
 <?php
-
-
   
   $fname=$_POST['fname'];
   $lname=$_POST['lname'];
@@ -14,16 +12,24 @@
 
   try
 {
-    $host="myazsqldemo.mysql.database.azure.com";
+    /*$host="localhost";
+    $port=3306;
+    $dbname="project";
+    $dbuser="root";
+    $dbpass="root";
+
+    $cn=new PDO("mysql:host=$host; port=$port; dbname=$dbname",$dbuser,$dbpass);*/
+   $host="myazsqldemo.mysql.database.azure.com";
     $port=3306;
     $dbname="project";
     $dbuser="myadmin@myazsqldemo";
     $dbpass="Server@1";
 
-    $cn=new PDO("mysql:host=$host; port=$port; dbname=$dbname",$dbuser,$dbpass);
-$cn = mysqli_init();
-    mysqli_ssl_set($cn,NULL,NULL,"DigiCertGlobalRootG2.crt.pem",NULL,NULL )    
-}catch(PDOException $e)
+    $cn = mysqli_init();
+    mysqli_ssl_set($cn,NULL,NULL,DigiCertGlobalRootG2.crt.pem,NULL,NULL )
+}
+
+catch(PDOException $e)
 {
     echo $e-> getmessage();
     die();
