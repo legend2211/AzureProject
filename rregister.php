@@ -21,9 +21,7 @@
 }
 $sql="insert into reciver(firstname,lastname,contcactno,email,bloodgroup) values('$fname','$lname',$cno,'$email','$bgroup')";
 $result=$cn->query($sql);
-
 $rowcount=$result->rowCount();
-
 if($rowcount==1)
 {
    ?>
