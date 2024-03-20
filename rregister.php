@@ -27,14 +27,14 @@ $result = mysqli_query($cn, $sql);
 if ($result) {
     mysqli_close($cn);
     header("location: index.php");
-    exit; // Stop further execution
+    exit; 
 } else {
     mysqli_close($cn);
     ?>
     <script type="text/javascript">alert('Failed to register. Please try again.');</script>
     <?php
     header("location: register1.html");
-    exit; // Stop further execution
+    exit; 
 }
 
 ?>
