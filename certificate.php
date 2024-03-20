@@ -4,22 +4,21 @@
     $lname=$_POST['lname'];
     $group=$_POST['bgroup'];
 
-    try
-    {
-        $host="localhost";
-        $port=3306;
-        $dbname="project";
-        $dbuser="root";
-        $dbpass="root";
-    
-        $cn=new PDO("mysql:host=$host; port=$port; dbname=$dbname",$dbuser,$dbpass);
-    }
-    
-    catch(PDOException $e)
-    {
-        echo $e-> getmessage();
-        die();
-    }
+    try {
+    $host = "myazsqldemo.mysql.database.azure.com";
+    $port = 3306;
+    $dbname = "project";
+    $dbuser = "myadmin@myazsqldemo";
+    $dbpass = "Server@1";
+
+    $cn = mysqli_init();
+    mysqli_ssl_set($cn, NULL, NULL, "DigiCertGlobalRootG2.crt.pem", NULL, NULL);
+    mysqli_real_connect($cn, $host, $dbuser, $dbpass, $dbname, $port);
+} catch (Exception $e) {
+    echo $e->getMessage();
+    die();
+}
+
     
     $sql="select * from register where firstname='$fname'and lastname='$lname' and bloodgroup='$group' ";
     $result=$cn->query($sql);
