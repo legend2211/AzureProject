@@ -79,8 +79,7 @@
 
     <img src="pic2.jpg" alt="Blood Donation" width="400px" height="200px">
 
-    <iframe src="https://webchat.botframework.com/embed/myazurelangservice-bot?s=QTo3OW4B30Q.vXQpz9bd3j7p1OAQ06NvjoRRPaAmuPkRD1XT7AJQvtQ"></iframe>
-
+   
     <p>The human body contains around 8 to 10 pints of blood depending on the size of the individual. However, the composition of the blood is not the same in each person. This is what determines the person's blood type.</p>
     <p>There are four ABO groups:</p>
     <ol>
@@ -95,6 +94,8 @@
     <h1>Why Donate Blood?</h1>
     <p>A blood donation truly is a “gift of life” that a healthy individual can give to others in their community who are sick or injured. In one hour’s time, a person can donate one unit of blood that can be separated into four individual components that could help save multiple lives.</p>
     <p>From one unit of blood, red blood cells can be extracted for use in trauma or surgical patients. Plasma, the liquid part of blood, is administered to patients with clotting problems. The third component of blood, platelets, clot the blood when cuts or other open wounds occur, and are often used in cancer and transplant patients. Cryoprecipitated anti-hemophilic factor (AHF) is also used for clotting factors.</p>
+     <iframe src="https://webchat.botframework.com/embed/myazurelangservice-bot?s=QTo3OW4B30Q.vXQpz9bd3j7p1OAQ06NvjoRRPaAmuPkRD1XT7AJQvtQ"></iframe>
+
 </body>
 
 </html>
