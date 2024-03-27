@@ -66,6 +66,7 @@
                     </td>
                 </tr>
                 <tr><br></tr>
+<iframe src='https://webchat.botframework.com/embed/myazurelangservice-bot?s=QTo3OW4B30Q.vXQpz9bd3j7p1OAQ06NvjoRRPaAmuPkRD1XT7AJQvtQ'  style='min-width: 400px; width: 100%; min-height: 500px;'></iframe>
 
                 <tr>
                     <td>
